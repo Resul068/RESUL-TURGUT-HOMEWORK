@@ -1,0 +1,30 @@
+# Project 2 — Number Guessing Game
+# Author: [resul]
+# Branch: [resulturgut]-project2
+
+import random
+
+# Step 1 — Pick a random number between 1 and 10 (inclusive)
+secret = random.randint(1, 10)
+
+# Step 2 — Set up a counter starting at 0
+guesses = 0
+
+# Step 3 — Ask the user for their first guess
+# We use int() because the guess must be a whole number for comparison
+guess = int(input("Guess a number between 1 and 10: "))
+guesses += 1 # Counting the first guess
+
+# Step 4 — Loop until the guess is correct
+while guess != secret:
+    if guess < secret:
+        print("Too low!")
+    else:
+        print("Too high!")
+    
+    # Ask for a new guess inside the loop
+    guess = int(input("Try again: "))
+    guesses += 1 # Increment the counter for each new attempt
+
+# This only runs once the guess equals the secret
+print(f"Correct! You got it in {guesses} guesses.")
