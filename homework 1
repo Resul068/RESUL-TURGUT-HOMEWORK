@@ -1,0 +1,23 @@
+# Project 1 — Temperature Converter
+# Author: [Your Name Here]
+# Branch: [YourFirstName]-project1
+
+"""
+Pseudocode:
+1. Ask the user to input a temperature value in Celsius.
+2. Convert the input string into a float so we can perform math on it.
+3. Apply the conversion formula: Multiply by 9/5 and add 32.
+4. Store the result in a variable named 'fahrenheit'.
+5. Use an f-string to display the result clearly with symbols.
+"""
+
+# Step 1 — Get input from the user and convert to float
+celsius_input = input("Enter temperature in Celsius: ")
+celsius = float(celsius_input)
+
+# Step 2 — Apply the formula
+# F = (C × 9/5) + 32
+fahrenheit = (celsius * 9 / 5) + 32
+
+# Step 3 — Print the result using an f-string
+print(f"{celsius}°C = {fahrenheit}°F")
